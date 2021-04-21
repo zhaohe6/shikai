@@ -1,0 +1,20 @@
+/* pages/addTask/addTask.wxss */
+page{
+  background-color: rgba(110, 175, 255, 21);
+}
+.cantainer{
+  width: 100%;
+  height: 100%;
+}
+.upper,
+.lower,
+.mid{
+  width: 90%;
+  margin: 20rpx auto;
+  height: 350rpx;
+  background-color: white;
+  border-radius: 15rpx;
+}
+.taskInput{
+  border-bottom-style: 1px solid red;
+}
