@@ -8,6 +8,7 @@
       <view>点击登录</view>
     </view>
   </view>
+  <view></view>
   <view class="iconlist">
     <view bind:tap="goTo" wx:for="{{listData}}" id="{{index}}" wx:key="index">
       <text class="iconfont {{item.icon}}" style='font-size:24px; padding:0 10rpx;'></text>
