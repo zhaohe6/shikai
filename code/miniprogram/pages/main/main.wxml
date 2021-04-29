@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="infoBar">
+    <view class="avatar">
+      <open-data type="userAvatarUrl"></open-data>
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+    <view class="day-title">
+      <view class="one">254天</view>
+      <button class="btn">每日打卡</button>
+      <view class="two">2021考研倒计时</view>
+    </view>
+    <view class="calender">
+      <calendarMonth bindmydata="mydata"></calendarMonth> 
+    </view>
+  </view>
+  <view class="object">
+    <text class="img">
+      <text class="iconfont icon-fangzi"></text>
+    </text>
+    <view>
+      <view>目标院校:<text>清华大学</text></view>
+      <view>目标专业:<text>计算机科学与工程</text></view>
+    </view>
+    <button class="btn">更改</button>
+  </view>
+  <view class="task">
+    <view class="bar">
+      <text class="iconfont icon-shizhong"> 今日任务</text>
+      <navigator style="font-wei ght:bold;line-height: 50rpx;">+添加</navigator>
+    </view>
+    <view class="content">
+        <text class="img">
+          <text class="iconfont icon-iconset0124"></text>
+        </text>
+        <view>
+          <navigator>添加学习任务</navigator>
+          <text class="text1">每日离梦想更近一点</text>
+        </view>
+    </view>
+  </view>
+</view>

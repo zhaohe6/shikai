@@ -1,0 +1,130 @@
+/* pages/main/main.wxss */
+@import "../../style/stylesheet.wxss";
+.infoBar{
+  position: relative;
+  width: 100%;
+  background-color: rgba(110, 175, 255, 100);
+}
+.avatar{
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+open-data[type="userAvatarUrl"]{
+  display: block;
+  margin: 0px auto;
+  background-color: rgba(249, 249, 249, 100);
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  
+}
+open-data[type="userNickName"]{
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  color: aliceblue;
+}
+.day-title>.one{
+
+  text-align: center;
+  color: rgba(255, 255, 255, 100);
+  font-size: 36px;
+}
+.day-title>.two{
+  text-align: center;
+  color: rgba(255, 255, 255, 100);
+  font-size: 12px;
+  margin-bottom: 30rpx;
+}
+.day-title>.btn{
+  position: absolute;
+  right: 10px;
+  top:30%;
+  width: 80px;
+  padding: 8px 0;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 100);
+  border-radius: 20px;
+  color: rgba(110, 175, 255, 100);
+  border: 1px solid rgba(255, 255, 255, 100);
+}
+.object{
+  width: 100%;
+  padding: 30rpx 10rpx 10rpx 30rpx;
+  display: flex;
+  border-bottom: 1px dashed rgb(187, 185, 185);
+}
+.object>view{
+  /* flex: 1; */
+  padding: 0 20rpx;
+  color: rgba(93, 154, 233, 100);
+  font-size: 27rpx;
+}
+.object>.btn{
+  color: rgba(93, 154, 233, 100);
+  width: 80rpx;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 0 0;
+  height: 40rpx;
+  background-color: rgb(199, 231, 252);
+  margin-top: 25rpx;
+  border-radius: 20rpx;
+}
+.object>.img{
+  /* flex:1; */
+  width: 100rpx;
+  height: 100rpx;
+  background-color: rgba(237, 237, 237, 100);
+  border-radius: 50%;
+}
+.object>.img{
+  line-height: 100rpx;
+  text-align: center;
+}
+.task{
+  width: 100%;
+}
+.task>.bar{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  
+}
+.task>.bar>text
+,.task>.bar>navigator
+{
+  /* flex: ; */
+  color: rgba(93, 154, 233, 100);
+  font-size:30rpx;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  padding: 30rpx 20rpx;
+}
+.content .img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: rgba(237, 237, 237, 100);
+  text-align: center;
+}
+.content view{
+  padding: 0 20rpx;
+}
+.content navigator{
+  text-align: center;
+  color: rgba(93, 154, 233, 100);
+  font-size: 14px;
+}
+.content .text1{
+  color: rgba(203, 203, 203, 100);
+  font-size: 12px;
+}
+/* 日历样式 */

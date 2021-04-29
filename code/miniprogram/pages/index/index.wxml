@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="upperPart">
+    <view class="text1">填写基本信息</view>
+    <view class="text2">为你找到合适的圈子</view>
+    <open-data type="userAvatarUrl"></open-data>
+    <open-data type="userNickName" lang="zh_CN"></open-data>
+  </view>
+
+  <view class="nextPart">
+    <form catchsubmit="formSubmit">
+      <view class="radio">
+        <radio-group name="sex" >
+          <label class="one"><radio value="man"/>男生</label>
+          <label class="two"><radio value="woman" checked="true"/>女生</label>
+        </radio-group>
+      </view>
+      <view class="nickname">
+        <text class="txt" decode="true">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</text>
+        <input class="myInput" type="text" 
+        name="nickname"
+        placeholder="请填写昵称"
+        placeholder-class="inputClass"/>
+      </view>
+      <view class="uni">
+        <text class="txt">报考学校</text>
+        <input class="myInput" type="text" 
+        name="uni"
+        placeholder="请填写报考学校"
+        placeholder-class="inputClass"/>
+      </view>
+      <view class="major">
+        <text class="txt">报考专业</text>
+        <input class="myInput" type="text" 
+        name="major"
+        placeholder="请填写报考的院系"
+        placeholder-class="inputClass"/>
+      </view>
+      <button class="btn" form-type="submit" bind:tap="goToMain">确定</button>
+    </form>
+  </view>
+</view>

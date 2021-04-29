@@ -1,0 +1,106 @@
+page {
+  background-color: #D3E5FB;
+}
+.my {
+  width: 100%;
+}
+.my .myinfo {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  color: #418deb;
+  margin: 0rpx auto;
+  padding: 10rpx;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.my .myinfo .image {
+  height: 148rpx;
+  width: 148rpx;
+  border-radius: 80rpx;
+  overflow: hidden;
+}
+.my .myinfo view {
+  margin-left: 30rpx;
+}
+.my .iconfont {
+  color: #e6e219;
+  width: 30rpx;
+}
+.my .iconlist {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  width: 100%;
+  margin: 0rpx auto;
+  flex-wrap: wrap;
+}
+.my .iconlist view {
+  width: 33.33%;
+  padding: 30rpx 0;
+  text-align: center;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+.my .iconlist view text {
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  display: block;
+}
+.my .iconlist view text:nth-child(1) {
+  margin-bottom: 10rpx;
+}
+.my .iconlist view .icon-wodechuangzuo {
+  color: #f77d7d;
+}
+.my .iconlist view .icon-shoucang1 {
+  color: orange;
+}
+.my .iconlist view .icon-liulanjilu1 {
+  color: #6aaa09;
+}
+.my .iconlist view:nth-child(3n+3) {
+  border-right: none;
+}
+.my .iconlist view:nth-last-child(1) {
+  border-bottom: none;
+}
+.my .iconlist view:nth-last-child(2) {
+  border-bottom: none;
+}
+.my .changeinfo {
+  background-color: #ffffff;
+  margin: 20rpx auto;
+  width: 80%;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  color: #5f5e5e;
+}
+.my .changeinfo .title {
+  font-weight: bolder;
+}
+.my .changeinfo .content form view {
+  margin: 10rpx auto;
+  align-items: center;
+  height: 70rpx;
+  display: flex;
+}
+.my .changeinfo .content form view text {
+  margin-right: 60rpx;
+}
+.my .changeinfo .content form view label {
+  margin-left: 40rpx;
+}
+.my .changeinfo .content .button_su {
+  display: flex;
+  width: 100%;
+  height: 60rpx;
+  background-color: #ffffff;
+}
+.my .changeinfo .content .button_su button {
+  flex: right;
+  margin-right: 0;
+  color: #0ebfd6;
+}

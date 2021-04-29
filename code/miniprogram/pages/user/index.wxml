@@ -1,0 +1,52 @@
+<view class="my">
+  <view class="myinfo">
+    <view class="image">
+      <open-data type="userAvatarUrl" />
+    </view>
+    <view>
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+      <view>点击登录</view>
+    </view>
+  </view>
+  <view class="iconlist">
+    <view bind:tap="goTo" wx:for="{{listData}}" id="{{index}}" wx:key="index">
+      <text class="iconfont {{item.icon}}" style='font-size:24px; padding:0 10rpx;'></text>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+  <view class="changeinfo">
+    <view class="title">个人资料</view>
+    <view class="content">
+      <form catchsubmit="formSubmit">
+        <view class="nickname">
+          <text class="txt" decode="true">昵称</text>
+          <input class="myInput" type="text" name="nickname" placeholder="{{}}" placeholder-class="inputClass" />
+        </view>
+        <view class="radio">
+          <radio-group name="sex">
+          性别
+            <label class="one">
+              <radio value="man" color="powderblue" />
+              男生
+            </label>
+            <label class="two">
+              <radio value="woman" color="powderblue" checked="true" />
+              女生
+            </label>
+          </radio-group>
+        </view>
+        <view class="uni">
+          <text class="txt">报考学校</text>
+          <input class="myInput" type="text" name="uni" placeholder="{{}}" placeholder-class="inputClass" />
+        </view>
+        <view class="major">
+          <text class="txt">报考专业</text>
+          <input class="myInput" type="text" name="major" placeholder="{{}}" placeholder-class="inputClass" />
+        </view>
+        <view class="button_su">
+          <button type="submit" size="mini">点击修改</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/addTask/addTask",
+    "pages/main/main",
+    "pages/studyRoom/index",
+    "pages/community/index",
+    "pages/user/index"
+  ],
+
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "石开",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#6EAFFF"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#007aff",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "icons/首页.png",
+        "selectedIconPath": "icons/首页active.png"
+      },
+      {
+        "pagePath": "pages/studyRoom/index",
+        "text": "自习室",
+        "iconPath": "icons/学习.png",
+        "selectedIconPath": "icons/学习active.png"
+      },
+      {
+        "pagePath": "pages/community/index",
+        "text": "社区",
+        "iconPath": "icons/社区.png",
+        "selectedIconPath": "icons/社区active.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "icons/个人中心.png",
+        "selectedIconPath": "icons/个人中心active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+
+  
+  "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

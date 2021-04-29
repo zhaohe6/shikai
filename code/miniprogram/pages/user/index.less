@@ -1,0 +1,113 @@
+page{
+    background-color:#D3E5FB;
+}
+.my {
+  width: 100%;
+    .myinfo {
+      width:100%;
+      height: 200rpx;
+      display: flex;
+      align-items: center;
+      color: #418deb;
+      margin:0rpx auto;
+      padding: 10rpx;
+      background: rgb(255, 255, 255);
+      box-sizing: border-box;
+      .image {
+        height: 148rpx;
+        width: 148rpx;
+        border-radius: 80rpx;
+        overflow: hidden;
+      }
+      view {
+        margin-left: 30rpx;
+        
+      }
+    }
+    .iconfont{
+        color: #e6e219;
+        width: 30rpx;
+    }
+    .iconlist {
+      display: flex;
+      align-items: center;
+      background:rgb(255, 255, 255);
+      width: 100%;
+      margin:0rpx auto;
+      flex-wrap: wrap;
+      view {
+        width: 33.33%;
+        padding: 30rpx 0;
+        text-align: center;
+        border-bottom: 1rpx solid rgba(0, 0, 0, .15);
+        box-sizing: border-box;
+        text {
+          text-align: center;
+          justify-content: center;
+          margin: 0 auto;
+          display: block;
+        }
+        text:nth-child(1) {
+          margin-bottom: 10rpx;
+        }
+        .icon-wodechuangzuo{
+          color: rgb(247, 125, 125);
+        }
+        .icon-shoucang1{
+          color: orange;
+        }
+        .icon-liulanjilu1{
+          color: rgb(106, 170, 9);
+        }
+      }
+      view:nth-child(3n+3) {
+        border-right: none;
+      }
+      view:nth-last-child(1) {
+        border-bottom: none;
+      }
+      view:nth-last-child(2) {
+        border-bottom: none;
+      }
+    }
+    .changeinfo{
+      background-color: rgb(255, 255, 255);
+      margin: 20rpx auto;
+      width: 80%;
+      border-radius: 20rpx;
+      padding: 40rpx;
+      color: rgb(95, 94, 94);
+      .title{
+        font-weight: bolder;
+      }
+      .content{
+        form{
+          view{
+            margin: 10rpx auto;
+            align-items: center;
+            //background-color: pink;
+            height: 70rpx;
+            display: flex;
+            text{
+              margin-right: 60rpx;
+            }
+            label{
+              margin-left: 40rpx;
+            }
+          }
+        }
+        .button_su{
+          display: flex;
+          width: 100%;
+          height: 60rpx;
+          background-color: rgb(255, 255, 255);
+          button{
+            flex: right;
+            margin-right: 0;
+            color: rgb(14, 191, 214);
+          }
+        }
+      }
+    }
+  }
+  
