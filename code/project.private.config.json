@@ -31,8 +31,15 @@
           "scene": null
         },
         {
-          "name": "pages/user/index",
-          "pathName": "pages/user/index",
+          "name": "pages/creation/index",
+          "pathName": "pages/creation/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/community/index",
+          "pathName": "pages/community/index",
+          "query": "",
           "scene": null
         }
       ]

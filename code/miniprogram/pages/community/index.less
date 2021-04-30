@@ -1,0 +1,75 @@
+page {
+    background-color: rgb(212, 226, 245);
+    height: 100vh;
+}
+
+.com_page {
+    position: relative;
+    margin: 20rpx;
+    .top_area {
+        //background-color: lavender;
+        display: flex;
+        height: 90rpx;
+        .team{
+            color: #6EAFFF;
+            background-color: rgb(248, 248, 248);
+            border-radius: 50%;
+            width: 60rpx;
+            height: 60rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            icon {
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+            }
+        }
+        SearchInput {
+            height: 100%;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    .team{
+        color: rgb(133, 131, 131);
+        font-size: 40rpx;
+        font-weight: bolder;
+        .tip_content{
+            font-size: 27rpx;
+            color: rgb(7, 7, 7);
+            font-weight:lighter;
+            background-color: white;
+            width: 80%;
+            padding: 30rpx;
+            border-radius: 30rpx;
+            margin: 20rpx auto;
+            .bottom{
+                display: flex;
+                view{
+                    color: rgb(156, 156, 156);
+                    margin: 0 10rpx;
+                }
+            }
+        }
+    }
+    .publish{
+        position: fixed;
+        right: 0;
+        bottom:80rpx;
+        background-color: rgb(98, 160, 252);
+        color: white;
+        width: 150rpx;
+        height: 150rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50%;
+        icon{
+            font-size: 50rpx;
+        }
+    }
+}

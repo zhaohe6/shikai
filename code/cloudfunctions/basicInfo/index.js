@@ -7,6 +7,9 @@ const db = cloud.database();
 exports.main = async (event, context) => {
   console.log(event)
     return await  db.collection("basicInfo").add({
-      data:event.info
+      data:{
+        info:event.info,
+        openId:event.userInfo.openId
+      }
     })
 }

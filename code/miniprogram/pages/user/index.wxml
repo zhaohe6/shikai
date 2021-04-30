@@ -5,15 +5,13 @@
     </view>
     <view>
       <open-data type="userNickName" lang="zh_CN"></open-data>
-      <view>点击登录</view>
     </view>
   </view>
-  <view></view>
   <view class="iconlist">
-    <view bind:tap="goTo" wx:for="{{listData}}" id="{{index}}" wx:key="index">
+    <navigator url="{{item.url}}" wx:for="{{listData}}" id="{{index}}" wx:key="index">
       <text class="iconfont {{item.icon}}" style='font-size:24px; padding:0 10rpx;'></text>
       <text>{{item.title}}</text>
-    </view>
+    </navigator>
   </view>
   <view class="changeinfo">
     <view class="title">个人资料</view>
@@ -21,11 +19,11 @@
       <form catchsubmit="formSubmit">
         <view class="nickname">
           <text class="txt" decode="true">昵称</text>
-          <input class="myInput" type="text" name="nickname" placeholder="{{}}" placeholder-class="inputClass" />
+          <input class="myInput" type="text" name="nickname" placeholder="{{userInfo.nickname}}" placeholder-class="inputClass" />
         </view>
         <view class="radio">
           <radio-group name="sex">
-          性别
+            性别
             <label class="one">
               <radio value="man" color="powderblue" />
               男生
@@ -38,16 +36,20 @@
         </view>
         <view class="uni">
           <text class="txt">报考学校</text>
-          <input class="myInput" type="text" name="uni" placeholder="{{}}" placeholder-class="inputClass" />
+          <input class="myInput" type="text" name="uni" placeholder="{{userInfo.uni}}" placeholder-class="inputClass" />
         </view>
         <view class="major">
           <text class="txt">报考专业</text>
-          <input class="myInput" type="text" name="major" placeholder="{{}}" placeholder-class="inputClass" />
+          <input class="myInput" type="text" name="major" placeholder="{{userInfo.major}}" placeholder-class="inputClass" />
         </view>
         <view class="button_su">
           <button type="submit" size="mini">点击修改</button>
         </view>
       </form>
     </view>
+  </view>
+  <view class="more">
+    <navigator class="about_us" url="/pages/about_us/index">关于我们</navigator>
+    <navigator class="service_lien" url="/pages/help/index">常见问题</navigator>
   </view>
 </view>

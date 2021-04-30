@@ -11,48 +11,33 @@ Page({
       {
         title: "我的创作",
         icon: "icon-wodechuangzuo",
-        url: "/pages/my_buy_list/index"
+        url: "/pages/creation/index"
       },
       {
         title: "我的收藏",
         icon: "icon-shoucang1",
-        url: "/pages/collect/index"
+        url: "/pages/collection/index"
       },
       {
         title: "浏览记录",
         icon: "icon-liulanjilu1",
-        url: "/pages/addaddress/index"
+        url: "/pages/looked/index"
       }
     ],
     reactionList:[
       {
         title: "关于我们",
         icon: "icon-xiazai",
-        url: "/pages/my_buy_list/index"
+        url: "/pages/about_us/index"
       },
       {
-        title: "检查更新",
+        title: "常见问题",
         icon: "icon-xiazai",
-        url: "/pages/my_buy_list/index"
-      },
-      {
-        title: "客服热线",
-        icon: "icon-xiazai",
-        url: "/pages/my_buy_list/index"
+        url: "/pages/help/index"
       }
     ],
-    // avator: 'http://yanxuan.nosdn.127.net/8945ae63d940cc42406c3f67019c5cb6.png',
-    // allcheck: false,
-    // userInfo: {},
-    // Listids: [],
+    userInfo: {},
     openId:""
-  },
-  goTo (event) {
-    // console.log(event)
-    // wx.navigateTo({
-    //   url: this.data.listData[event.currentTarget.id].url
-    // });
-      
   },
   /**
    * 生命周期函数--监听页面加载
@@ -77,6 +62,21 @@ Page({
    */
   onShow: function () {
     //console.log(wx.getStorageSync('openId') )
+// 这里的是云函数
+//     wx.cloud.callFunction({
+//       name: "getUserInfo"
+//     }).then(res =>{
+//       let arr =res.result;
+//       this.setData({
+//         userInfo:arr[arr.length-1].info,
+//       })
+//       wx.setStorage({
+//         key: 'userInfo',
+//         data: this.data.userInfo.info,
+//       });
+        
+//     })
+
     this.setData({
       openId : wx.getStorageSync('openId') || '',
     })

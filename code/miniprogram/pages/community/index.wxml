@@ -1,2 +1,37 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="com_page">
+    <view class="top_area">
+        <navigator class="team" url="/pages/group/index">
+            <icon class="iconfont icon-qunzu-jianying"></icon>
+        </navigator>
+        <SearchInput></SearchInput>
+        <navigator class="team store" url="/pages/resources/index">
+            <icon class="iconfont icon-xiazai-copy"></icon>
+        </navigator>
+    </view>
+    <view class="center">
+        <view class="team" wx:for="{{teamList}}" wx:for-item="item1">
+            <view class="title">{{item1.nickName}}</view>
+            <view class="tip_content" wx:for="{{item1.tipList}}" wx:for-item="item2">
+                <view class="item_name" key="{{item2.nickName}}">{{item2.nickName}}</view>
+                <view class="item_content">
+                    <text class="" selectable="ture" space="false" decode="false">
+                        {{item2.content}}
+                    </text>
+                    <image class="image" src="" mode="widthFix" />
+                </view>
+                <view class="bottom">
+                    <view class="num">{{item2.readNum}}阅读</view>
+                    <view class="comment">评论{{item2.comment}}</view>
+                    <view class="like">喜欢{{item2.like}}</view>
+                    <view class="time">发帖时间{{item2.time}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <navigator url="/pages/publish/index" class="publish">
+        <icon class="iconfont icon-wodechuangzuo">
+        </icon>
+        发帖
+    </navigator>
+      
+</view>

@@ -1,1 +1,72 @@
-/* pages/cart/index.wxss */
+page {
+  background-color: #d4e2f5;
+  height: 100vh;
+}
+.com_page {
+  position: relative;
+  margin: 20rpx;
+}
+.com_page .top_area {
+  display: flex;
+  height: 90rpx;
+}
+.com_page .top_area .team {
+  color: #6EAFFF;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.com_page .top_area .team icon {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.com_page .top_area SearchInput {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+.com_page .team {
+  color: #858383;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.com_page .team .tip_content {
+  font-size: 27rpx;
+  color: #070707;
+  font-weight: lighter;
+  background-color: white;
+  width: 80%;
+  padding: 30rpx;
+  border-radius: 30rpx;
+  margin: 20rpx auto;
+}
+.com_page .team .tip_content .bottom {
+  display: flex;
+}
+.com_page .team .tip_content .bottom view {
+  color: #9c9c9c;
+  margin: 0 10rpx;
+}
+.com_page .publish {
+  position: fixed;
+  right: 0;
+  bottom: 80rpx;
+  background-color: #62a0fc;
+  color: white;
+  width: 150rpx;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+}
+.com_page .publish icon {
+  font-size: 50rpx;
+}

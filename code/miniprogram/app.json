@@ -5,7 +5,14 @@
     "pages/main/main",
     "pages/studyRoom/index",
     "pages/community/index",
-    "pages/user/index"
+    "pages/user/index",
+    "pages/collection/index",
+    "pages/looked/index",
+    "pages/about_us/index",
+    "pages/help/index",
+    "pages/publish/index",
+    "pages/group/index",
+    "pages/resources/index"
   ],
 
   "window": {

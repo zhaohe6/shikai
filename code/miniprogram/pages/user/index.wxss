@@ -36,29 +36,29 @@ page {
   margin: 0rpx auto;
   flex-wrap: wrap;
 }
-.my .iconlist view {
+.my .iconlist navigator {
   width: 33.33%;
   padding: 30rpx 0;
   text-align: center;
   border-bottom: 1rpx solid rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
 }
-.my .iconlist view text {
+.my .iconlist navigator text {
   text-align: center;
   justify-content: center;
   margin: 0 auto;
   display: block;
 }
-.my .iconlist view text:nth-child(1) {
+.my .iconlist navigator text:nth-child(1) {
   margin-bottom: 10rpx;
 }
-.my .iconlist view .icon-wodechuangzuo {
+.my .iconlist navigator .icon-wodechuangzuo {
   color: #f77d7d;
 }
-.my .iconlist view .icon-shoucang1 {
+.my .iconlist navigator .icon-shoucang1 {
   color: orange;
 }
-.my .iconlist view .icon-liulanjilu1 {
+.my .iconlist navigator .icon-liulanjilu1 {
   color: #6aaa09;
 }
 .my .iconlist view:nth-child(3n+3) {
@@ -103,4 +103,15 @@ page {
   flex: right;
   margin-right: 0;
   color: #0ebfd6;
+}
+.my .more {
+  background-color: #ffffff;
+  margin: 20rpx auto;
+  width: 80%;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  color: #5f5e5e;
+}
+.my .more navigator {
+  height: 70rpx;
 }

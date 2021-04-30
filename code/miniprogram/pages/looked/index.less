@@ -1,0 +1,52 @@
+page {
+    background-color: rgb(213, 234, 248);
+}
+
+.all {
+    width: 100%;
+
+    .contain {
+        margin: 30rpx auto;
+        padding: 30rpx;
+        background-color: #ffffff;
+        width: 80%;
+        border-radius: 30rpx;
+        height: 260rpx;
+
+        .title {
+            font-size: 30rpx;
+            font-weight: bolder;
+            height: 50rpx;
+        }
+
+        .middle {
+            width: 100%;
+            display: flex;
+
+            view {
+                width: 70%;
+                height: 140rpx;
+                background-color: rgb(255, 255, 255);
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                margin: 10rpx auto;
+            }
+
+            image {
+                height: 800rpx;
+                width: 200rpx;
+            }
+        }
+
+        .bottom {
+            color: rgb(192, 192, 192);
+            display: flex;
+
+            view {
+                margin: 10rpx;
+            }
+        }
+    }
+}
