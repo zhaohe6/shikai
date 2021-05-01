@@ -6,11 +6,13 @@ page {
 .com_page {
     position: relative;
     margin: 20rpx;
+
     .top_area {
         //background-color: lavender;
         display: flex;
         height: 90rpx;
-        .team{
+
+        .team {
             color: #6EAFFF;
             background-color: rgb(248, 248, 248);
             border-radius: 50%;
@@ -27,38 +29,44 @@ page {
                 margin: 0 auto;
             }
         }
+
         SearchInput {
             height: 100%;
             width: 80%;
             margin: 0 auto;
         }
     }
-    .team{
+
+    .team {
         color: rgb(133, 131, 131);
         font-size: 40rpx;
         font-weight: bolder;
-        .tip_content{
+
+        .tip_content {
             font-size: 27rpx;
             color: rgb(7, 7, 7);
-            font-weight:lighter;
+            font-weight: lighter;
             background-color: white;
             width: 80%;
             padding: 30rpx;
             border-radius: 30rpx;
             margin: 20rpx auto;
-            .bottom{
+
+            .bottom {
                 display: flex;
-                view{
+
+                view {
                     color: rgb(156, 156, 156);
                     margin: 0 10rpx;
                 }
             }
         }
     }
-    .publish{
+
+    .publish {
         position: fixed;
         right: 0;
-        bottom:80rpx;
+        bottom: 80rpx;
         background-color: rgb(98, 160, 252);
         color: white;
         width: 150rpx;
@@ -68,8 +76,44 @@ page {
         justify-content: center;
         text-align: center;
         border-radius: 50%;
-        icon{
+
+        icon {
             font-size: 50rpx;
         }
     }
+
+    .detail-page {
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        color: rgb(12, 148, 238);
+        padding: 40rpx;
+        font-size: 30rpx;
+        .submit{
+            //background-color: aqua;
+            position: absolute;
+            right: 40rpx;
+            top: 40rpx;
+            color: rgb(242, 189, 16);
+            font-size: 30rpx;
+        }
+        input{
+            width: 80%;
+            height: 50rpx;
+            //border: solid #3F92F7 4rpx;
+            border-radius: 40rpx;
+            margin: 20rpx;
+            padding: 30rpx;
+            //background-color: #ebebeb;
+            color: rgb(9, 90, 212);
+        }
+        .page__bd{
+            color: rgb(12, 148, 238);
+        }
+      }
 }

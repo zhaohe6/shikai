@@ -1,8 +1,5 @@
 <view class="com_page">
     <view class="top_area">
-        <navigator class="team" url="/pages/group/index">
-            <icon class="iconfont icon-qunzu-jianying"></icon>
-        </navigator>
         <SearchInput></SearchInput>
         <navigator class="team store" url="/pages/resources/index">
             <icon class="iconfont icon-xiazai-copy"></icon>
@@ -28,10 +25,24 @@
             </view>
         </view>
     </view>
-    <navigator url="/pages/publish/index" class="publish">
-        <icon class="iconfont icon-wodechuangzuo">
-        </icon>
+    <view bindtap="popup" url="/pages/publish/index" class="publish">
+        <icon class="iconfont icon-wodechuangzuo"></icon>
         发帖
-    </navigator>
-      
+    </view>
+    <page-container show="{{show}}" round="{{true}}" overlay="{{true}}" duration="{{300}}" position='bottom' close-on-slide-down="{{true}}" bindbeforeenter="onBeforeEnter" bindenter="onEnter" bindafterenter="onAfterEnter" bindbeforeleave="onBeforeLeave" bindleave="onLeave" bindafterleave="onAfterLeave" bindclickoverlay="onClickOverlay">
+        <view class="detail-page">
+            <view class="submit" bindtap="exit">发布</view>
+            主题
+            <input class="" value="" type="text" placeholder="输入主题"></input>
+            内容
+            <input class="" value="" type="text" placeholder="输入内容"></input>
+            <view class="page__bd">
+                <mp-cells>
+                    <mp-cell>
+                        <mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" upload="{{uplaodFile}}" files="{{files}}" max-count="3" title="图片上传"></mp-uploader>
+                    </mp-cell>
+                </mp-cells>
+            </view>
+        </view>
+    </page-container>
 </view>

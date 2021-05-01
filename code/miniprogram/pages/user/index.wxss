@@ -33,6 +33,7 @@ page {
   align-items: center;
   background: #ffffff;
   width: 100%;
+  justify-content: space-between;
   margin: 0rpx auto;
   flex-wrap: wrap;
 }

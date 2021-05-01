@@ -1,7 +1,31 @@
 <view class="contain">
-    <view class="head">+</view>
+    <view bindtap="popup" class="head">
+        <view>+</view>
+    </view>
     <view class="history">
         <view class="title">历史自习室</view>
-        <view class="content"></view>
+        <view class="content" wx:for="{{historyRoom}}">
+            <navigator class="navigator" url="" open-type="navigate">
+                <view class="roomTitle">{{item.name}}</view>
+                <view class="number">{{item.number}}人正在自习</view>
+            </navigator>
+        </view>
     </view>
+    <view class="recommand">
+        <view class="title">推荐自习室</view>
+        <view class="content" wx:for="{{recommandRoom}}">
+            <navigator class="navigator" url="" open-type="navigate">
+                <view class="roomTitle">{{item.name}}</view>
+                <view class="number">{{item.number}}人正在自习</view>
+            </navigator>
+        </view>
+    </view>
+    <page-container show="{{show}}" round="{{true}}" overlay="{{true}}" duration="{{300}}" position='bottom' close-on-slide-down="{{true}}" bindbeforeenter="onBeforeEnter" bindenter="onEnter" bindafterenter="onAfterEnter" bindbeforeleave="onBeforeLeave" bindleave="onLeave" bindafterleave="onAfterLeave" bindclickoverlay="onClickOverlay">
+        <view class="detail-page">
+            <view class="submit" bindtap="exit">发布</view>
+            <input class="" value="" type="text" placeholder="请在这里输入自习室的名字" ></input>
+            <input class="" value="" type="text" placeholder="请在这里输入自习室的标签" ></input>
+              
+        </view>
+    </page-container>
 </view>

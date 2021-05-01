@@ -7,11 +7,9 @@
     "pages/community/index",
     "pages/user/index",
     "pages/collection/index",
-    "pages/looked/index",
     "pages/about_us/index",
     "pages/help/index",
     "pages/publish/index",
-    "pages/group/index",
     "pages/resources/index"
   ],
 
@@ -56,10 +54,9 @@
     ]
   },
   "sitemapLocation": "sitemap.json",
-
-  
-  "style": "v2",
   "useExtendedLib": {
+    "kbone": true,
     "weui": true
-  }
+  },
+  "style": "v2"
 }

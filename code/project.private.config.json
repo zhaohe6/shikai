@@ -45,6 +45,12 @@
         {
           "name": "pages/publish/index",
           "pathName": "pages/publish/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/studyRoom/index",
+          "pathName": "pages/studyRoom/index",
           "scene": null
         }
       ]

@@ -17,11 +17,6 @@ Page({
         title: "我的收藏",
         icon: "icon-shoucang1",
         url: "/pages/collection/index"
-      },
-      {
-        title: "浏览记录",
-        icon: "icon-liulanjilu1",
-        url: "/pages/looked/index"
       }
     ],
     reactionList:[
