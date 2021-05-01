@@ -1,2 +1,5 @@
-<!--pages/publish/index.wxml-->
-<text>pages/publish/index.wxml</text>
+<view class="contain">
+    <view>发帖主题</view>
+    <view>发帖内容</view>
+    <view>图片选择</view>
+</view>

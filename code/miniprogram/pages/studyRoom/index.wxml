@@ -1,2 +1,7 @@
-<!--pages/category/index.wxml-->
-<text>pages/studyRoom/index.wxml</text>
+<view class="contain">
+    <view class="head">+</view>
+    <view class="history">
+        <view class="title">历史自习室</view>
+        <view class="content"></view>
+    </view>
+</view>
