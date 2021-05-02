@@ -32,6 +32,8 @@ Page({
     }).then(res => {
       console.log(res)
     wx.setStorageSync('userInfo',this.data.info )
+
+    
       if (res.errMsg == "cloud.callFunction:ok") {
         wx.showToast({
           title: '提交成功',
