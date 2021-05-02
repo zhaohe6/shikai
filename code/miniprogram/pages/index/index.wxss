@@ -1,0 +1,79 @@
+page{
+  background-color: rgb(248, 249, 252);
+  opacity: 0.9;
+}
+.upperPart{
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.upperPart>.text1{
+  color: rgba(110, 175, 255, 100);
+  font-size: 26px;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.upperPart>.text2{
+  color: rgba(206, 206, 206, 100);
+  font-size: 14px;
+  text-align: center;
+}
+open-data[type="userAvatarUrl"]{
+  display: block;
+  margin: 10px auto;
+  background-color: rgba(249, 249, 249, 100);
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+open-data[type="userNickName"]{
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.myInput{
+  width: 200px;
+  height: 30px;
+  display: inline-block;
+  margin-left:20px;
+  position: relative;
+  top: 20%;
+}
+.nickname,.uni,.major{
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid rgba(255, 0, 0, 0);
+  border-radius: 20px;
+  height: 50px;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+.nextPart .txt{
+  line-height: 50px;
+  font-size: 14px;
+  font-family: PingFangSC-regular;
+}
+.radio>radio-group{
+  text-align: center;
+}
+.one,.two{
+  font-size: 14px;
+  display: inline-block;
+  margin: 0px 30px;
+}
+.inputClass{
+  color: rgba(206, 206, 206, 100);
+  font-family: PingFangSC-regular;
+}
+.btn{
+  margin-top: 30px;
+  width: 300px;
+  height: 42px;
+  line-height: 23px;
+  border-radius: 20px;
+  background-color: rgba(110, 175, 255, 100);
+  font-size: 16px;
+  text-align: center;
+  font-family: Arial;
+  color: aliceblue;
+  letter-spacing: 5px;
+}

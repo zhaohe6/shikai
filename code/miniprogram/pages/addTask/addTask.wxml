@@ -1,0 +1,8 @@
+<!--pages/addTask/addTask.wxml-->
+<view class="container">
+  <view class="upper">
+    <input type="text" type="taskInput" placeholder="请编辑你的任务"/>
+  </view>
+  <view class="mid"></view>
+  <view class="lower"></view>
+</view>
