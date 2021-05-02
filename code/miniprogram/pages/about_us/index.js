@@ -5,7 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    developerList:[{
+      "name":"guji",
+      "work":"个人中心页面开发"
+    },
+    {
+      "name":"zhaohe",
+      "work":"首页页面开发，数据库搭建"
+    },
+    {
+      "name":"lxl",
+      "work":"社区页面开发"
+    },
+    {
+      "name":"gzy",
+      "work":"产品原型制作"
+    }
+  ]
   },
 
   /**

@@ -1,14 +1,13 @@
 // pages/user/index.js
 // import { get, login, toLogin } from '../../request/index'
-const app = getApp() 
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    listData: [
-      {
+    listData: [{
         title: "我的创作",
         icon: "icon-wodechuangzuo",
         url: "/pages/creation/index"
@@ -19,8 +18,7 @@ Page({
         url: "/pages/collection/index"
       }
     ],
-    reactionList:[
-      {
+    reactionList: [{
         title: "关于我们",
         icon: "icon-xiazai",
         url: "/pages/about_us/index"
@@ -32,7 +30,47 @@ Page({
       }
     ],
     userInfo: {},
-    openId:""
+    openId: ""
+  },
+  formSubmit(e) {
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 1000,
+      mask: true
+    })
+    console.log(e)
+    //这里的是云函数
+    wx.cloud.callFunction({
+      name: "getOpenid"
+    }).then(res => {
+      console.log(res.result.openid)
+      this.setData({
+        openId: res.result.openid
+      })
+      wx.setStorageSync('openId', this.data.openId)
+    })
+    wx.cloud.callFunction({
+      name: "basicInfo",
+      data: {
+        info: e.detail.value
+      }
+    }).then(res => {
+      console.log(res)
+      wx.setStorage({
+        key: 'userInfo',
+        data: this.data.userInfo,
+      });
+      if (res.errMsg == "cloud.callFunction:ok") {
+        wx.showToast({
+          title: '提交成功',
+          icon: 'succes',
+          duration: 1000,
+          mask: true
+        })
+      }
+    })
+
   },
   /**
    * 生命周期函数--监听页面加载
@@ -57,24 +95,33 @@ Page({
    */
   onShow: function () {
     //console.log(wx.getStorageSync('openId') )
-// 这里的是云函数
-//     wx.cloud.callFunction({
-//       name: "getUserInfo"
-//     }).then(res =>{
-//       let arr =res.result;
-//       this.setData({
-//         userInfo:arr[arr.length-1].info,
-//       })
-//       wx.setStorage({
-//         key: 'userInfo',
-//         data: this.data.userInfo.info,
-//       });
-        
-//     })
-
+    // 这里的是云函数
     this.setData({
-      openId : wx.getStorageSync('openId') || '',
+      openId: wx.getStorageSync('openId') || '',
     })
+    if (wx.getStorageSync('userInfo')) {
+      this.setData({
+        userInfo: wx.getStorageSync('userInfo') || '',
+      })
+    } else {
+      wx.cloud.callFunction({
+        name: "getUserInfo"
+      }).then(res => {
+        let arr = res.result;
+        this.setData({
+          userInfo: arr[arr.length - 1].info,
+        })
+        console.log(this.data.userInfo);
+        wx.setStorage({
+          key: 'userInfo',
+          data: this.data.userInfo,
+        });
+
+      })
+
+    }
+
+
   },
 
   /**

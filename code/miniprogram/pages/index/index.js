@@ -15,31 +15,32 @@ Page({
     })
     console.log(e)
 //这里的是云函数
-    // wx.cloud.callFunction({
-    //   name: "getOpenid"
-    // }).then(res =>{
-    //   console.log(res.result.openid)
-    //   this.setData({
-    //     openId:res.result.openid
-    //   })
-    //   wx.setStorageSync('openId',this.data.openId )
-    // })
-    // wx.cloud.callFunction({
-    //   name: "basicInfo",
-    //   data: {
-    //     info: e.detail.value
-    //   }
-    // }).then(res => {
-    //   console.log(res)
-    //   if (res.errMsg == "cloud.callFunction:ok") {
-    //     wx.showToast({
-    //       title: '提交成功',
-    //       icon: 'succes',
-    //       duration: 1000,
-    //       mask: true
-    //     })
-    //   }
-    // })
+    wx.cloud.callFunction({
+      name: "getOpenid"
+    }).then(res =>{
+      console.log(res.result.openid)
+      this.setData({
+        openId:res.result.openid
+      })
+      wx.setStorageSync('openId',this.data.openId )
+    })
+    wx.cloud.callFunction({
+      name: "basicInfo",
+      data: {
+        info: e.detail.value
+      }
+    }).then(res => {
+      console.log(res)
+    wx.setStorageSync('userInfo',this.data.info )
+      if (res.errMsg == "cloud.callFunction:ok") {
+        wx.showToast({
+          title: '提交成功',
+          icon: 'succes',
+          duration: 1000,
+          mask: true
+        })
+      }
+    })
 
   },
   goToMain() {

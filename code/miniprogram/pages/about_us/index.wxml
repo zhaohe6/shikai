@@ -1,2 +1,9 @@
-<!--pages/about_us/index.wxml-->
-<text>pages/about_us/index.wxml</text>
+<view class="contain">
+    <view class="head">开发人员</view>
+    <view class="content">
+        <view wx:for="{{developerList}}" class="developerList">
+            <view class="name">{{item.name}}</view>
+            <view class="work">{{item.work}}</view>
+        </view>
+    </view>
+</view>

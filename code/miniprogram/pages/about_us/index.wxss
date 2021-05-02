@@ -1,1 +1,32 @@
-/* pages/about_us/index.wxss */
+page {
+  background-color: #cae3ff;
+}
+.contain {
+  padding: 20rpx;
+}
+.contain .content {
+  width: 80%;
+  margin: 0 auto;
+}
+.contain .content .developerList {
+  display: flex;
+  background-color: white;
+  margin: 10rpx auto;
+  height: 160rpx;
+  width: 100%;
+  padding: 20rpx;
+  border-radius: 40rpx;
+}
+.contain .content .developerList .name {
+  margin: 40rpx;
+  color: #1072c2;
+  font-size: 30rpx;
+}
+.contain .content .developerList .work {
+  margin-top: 40rpx;
+  color: #698f1d;
+}
+.contain .head {
+  color: #4093e0;
+  font-size: 30rpx;
+}
