@@ -7,174 +7,101 @@ Page({
   data: {
     files: [],
     teamList: [{
-        nickName: "清华大学考研小组",
-        tipList: [{
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, ]
-      },
-      {
-        nickName: "北京大学",
-        tipList: [{
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, ]
-      },
-      {
-        nickName: "东华大学",
-        tipList: [{
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, {
-          nickName: "昵称",
-          content: "内容",
-          readNum: "32",
-          comment: "12",
-          like: "34",
-          time: "2021-4-17"
-        }, ]
-      },
-    ]
+      name: "昵称",
+      content: "内容",
+      readNum: "32",
+      comment: "12",
+      like: "34",
+      time: "2021-4-17"
+    }, {
+      name: "昵称",
+      content: "内容",
+      readNum: "32",
+      comment: "12",
+      like: "34",
+      time: "2021-4-17"
+    }, {
+      name: "昵称",
+      content: "内容",
+      readNum: "32",
+      comment: "12",
+      like: "34",
+      time: "2021-4-17"
+    }, {
+      name: "昵称",
+      content: "内容",
+      readNum: "32",
+      comment: "12",
+      like: "34",
+      time: "2021-4-17"
+    }, {
+      name: "昵称",
+      content: "内容",
+      readNum: "32",
+      comment: "12",
+      like: "34",
+      time: "2021-4-17"
+    }, {
+      name: "昵称",
+      content: "内容",
+      readNum: "32",
+      comment: "12",
+      like: "34",
+      time: "2021-4-17"
+    }, {
+      name: "昵称",
+      content: "内容",
+      readNum: "32",
+      comment: "12",
+      like: "34",
+      time: "2021-4-17"
+    }, ],
+    message: {},
+    position: '',
+    show: false,
+    customStyle: '',
+    duration: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let myDate = new Date();
+    let time = myDate.toLocaleString();
+    console.log(time)
+
+
+    let that = this;
     this.setData({
       selectFile: this.selectFile.bind(this),
       uplaodFile: this.uplaodFile.bind(this)
+    })
+    wx.cloud.callFunction({
+      name: "getCommunityPost"
+    }).then(res => {
+      //console.log(res.result.data);
+      this.setData({
+        teamList: res.result.data
+      })
+      // for (let i in this.teamList.image) {
+
+      // }
+      this.data.teamList.forEach(function (value, index) {
+        //console.log(value)
+        if (value.image) {
+          wx.cloud.downloadFile({
+            fileID: value.image[0]
+          }).then(res => {
+            //console.log(res)
+            that.setData({
+              ['teamList[' + index + '].image']: res.tempFilePath,
+            })
+          })
+        }
+      })
+      wx.setStorageSync("teamList",this.data.teamList);
+    
     })
   },
   chooseImage: function (e) {
@@ -190,6 +117,54 @@ Page({
       }
     })
   },
+  formSubmit(e) {
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 1000,
+      mask: true
+    })
+    let myDate = new Date();
+    let time = myDate.toLocaleString();
+    console.log(time)
+    //console.log(e)
+    this.setData({
+      "message.name": e.detail.value.name,
+      "message.content": e.detail.value.content,
+      "message.time": time,
+      "message.like": 0,
+      "message.read": 0
+    })
+    for (let i in this.data.message) {
+      if (this.data.message[i].length == 0 && i != "image") {
+        wx.showToast({
+          title: '输入有误发布失败',
+          icon: 'loading',
+          duration: 500,
+          mask: true
+        })
+        return 0
+      }
+    }
+    //这里的是云函数
+    console.log(this.data.message)
+    wx.cloud.callFunction({
+      name: "uploadPost",
+      data: {
+        message: this.data.message
+      }
+    }).then(res => {
+      console.log("success")
+      wx.cloud.callFunction({
+        name: "getCommunityPost"
+      }).then(res => {
+        console.log(res.result.data);
+        this.setData({
+          teamList: res.result.data
+        })
+      })
+    })
+  },
   previewImage: function (e) {
     wx.previewImage({
       current: e.currentTarget.id, // 当前显示图片的http链接
@@ -200,13 +175,44 @@ Page({
     console.log('files', files)
     // 返回false可以阻止某次文件上传
   },
+
   uplaodFile(files) {
     console.log('upload files', files)
-    // 文件上传的函数，返回一个promise
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        reject('some error')
-      }, 1000)
+      const tempFilePaths = files.tempFilePaths;
+      const that = this;
+      const object = {};
+      for (var i = 0; i < tempFilePaths.length; i++) {
+        let filePath = '',
+          cloudPath = ''
+        filePath = tempFilePaths[i]
+        cloudPath = 'post-image-' + new Date().getTime() + '-' + i + filePath.match(/\.[^.]+?$/)[0]
+        //console.log(filePath)
+        //console.log(cloudPath)
+        const upload_task = wx.cloud.uploadFile({
+          filePath,
+          cloudPath,
+          success: function (res) {
+            //console.log(res)
+            if (res.statusCode === 200 || res.statusCode === 204 || res.statusCode === 205) {
+              const url = res.fileID
+              that.data.files.push(url)
+              if (that.data.files.length === tempFilePaths.length) {
+                object.urls = that.data.files;
+                resolve(object) //这就是判断是不是最后一张
+              }
+            } else {
+              reject('error')
+            }
+          },
+          fail: function (err) {
+            console.log(err)
+          },
+          conplete: () => {
+
+          }
+        })
+      }
     })
   },
   uploadError(e) {
@@ -214,6 +220,9 @@ Page({
   },
   uploadSuccess(e) {
     console.log('upload success', e.detail)
+    this.setData({
+      "message.image": e.detail.urls
+    })
   },
   popup(e) {
     const position = e.currentTarget.dataset.position

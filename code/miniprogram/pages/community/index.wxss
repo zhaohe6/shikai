@@ -31,14 +31,9 @@ page {
   width: 80%;
   margin: 0 auto;
 }
-.com_page .team {
-  color: #858383;
-  font-size: 40rpx;
-  font-weight: bolder;
-}
-.com_page .team .tip_content {
+.com_page .center .tip_content {
   font-size: 27rpx;
-  color: #070707;
+  color: #2e2d2d;
   font-weight: lighter;
   background-color: white;
   width: 80%;
@@ -46,11 +41,21 @@ page {
   border-radius: 30rpx;
   margin: 20rpx auto;
 }
-.com_page .team .tip_content .bottom {
-  display: flex;
+.com_page .center .tip_content .item_name {
+  color: #1937b9;
+  font-size: 30rpx;
+  font-weight: bolder;
 }
-.com_page .team .tip_content .bottom view {
-  color: #9c9c9c;
+.com_page .center .tip_content .bottom {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.com_page .center .tip_content .bottom view {
+  color: #eb0b0b;
+  margin: 0 10rpx;
+}
+.com_page .center .tip_content .time {
+  color: #6580f7;
   margin: 0 10rpx;
 }
 .com_page .publish {
@@ -84,8 +89,9 @@ page {
   font-size: 30rpx;
 }
 .com_page .detail-page .submit {
+  width: 200rpx;
   position: absolute;
-  right: 40rpx;
+  right: 10rpx;
   top: 40rpx;
   color: #f2bd10;
   font-size: 30rpx;
@@ -95,7 +101,7 @@ page {
   height: 50rpx;
   border-radius: 40rpx;
   margin: 20rpx;
-  padding: 30rpx;
+  padding: 10rpx;
   color: #095ad4;
 }
 .com_page .detail-page .page__bd {

@@ -1,6 +1,6 @@
 <view class="container">
   <view class="upperPart">
-    <view class="text1">填写基本信息</view>
+    <view class="text1" bind:tap="giveInfo">填写基本信息</view>
     <view class="text2">为你找到合适的圈子</view>
     <open-data type="userAvatarUrl"></open-data>
     <open-data type="userNickName" lang="zh_CN"></open-data>

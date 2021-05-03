@@ -37,28 +37,32 @@ page {
         }
     }
 
-    .team {
-        color: rgb(133, 131, 131);
-        font-size: 40rpx;
-        font-weight: bolder;
-
+    .center {
         .tip_content {
             font-size: 27rpx;
-            color: rgb(7, 7, 7);
+            color: rgb(46, 45, 45);
             font-weight: lighter;
             background-color: white;
             width: 80%;
             padding: 30rpx;
             border-radius: 30rpx;
             margin: 20rpx auto;
-
+            .item_name{
+                color: rgb(25, 55, 185);
+                font-size: 30rpx;
+                font-weight: bolder;
+            }
             .bottom {
                 display: flex;
-
+                flex-wrap: nowrap;
                 view {
-                    color: rgb(156, 156, 156);
+                    color: rgb(235, 11, 11);
                     margin: 0 10rpx;
                 }
+            }
+            .time{
+                color: rgb(101, 128, 247);
+                margin: 0 10rpx;
             }
         }
     }
@@ -96,8 +100,9 @@ page {
         font-size: 30rpx;
         .submit{
             //background-color: aqua;
+            width: 200rpx;
             position: absolute;
-            right: 40rpx;
+            right: 10rpx;
             top: 40rpx;
             color: rgb(242, 189, 16);
             font-size: 30rpx;
@@ -108,7 +113,7 @@ page {
             //border: solid #3F92F7 4rpx;
             border-radius: 40rpx;
             margin: 20rpx;
-            padding: 30rpx;
+            padding: 10rpx;
             //background-color: #ebebeb;
             color: rgb(9, 90, 212);
         }

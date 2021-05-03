@@ -1,0 +1,23 @@
+<view class="contain">
+    <view class="user">
+        
+        <view class="author_name">{{userInfo.nickname}}</view>
+        <image class="author_image" src="{{userInfo.avatar}}" mode="widthFix" />        
+        <view class="author_major">{{userInfo.major}}</view>
+    </view>
+    <view class="center">
+        <view class="item_name">{{articalInfo.name}}</view>
+        <view class="item_content">
+            <text class="" selectable="ture" space="false" decode="false">
+                {{articalInfo.content}}
+            </text>
+            <image wx:if="{{articalInfo.image}}" class="image" src="{{articalInfo.image}}" mode="widthFix" />
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="num">{{articalInfo.read}}阅读</view>
+        <view class="like">{{articalInfo.like}}喜欢</view>
+        <view class="time">发帖时间  {{articalInfo.time}}</view>
+    </view>
+    <open-data class="" type="userAvatarUrl" ></open-data>
+</view>

@@ -5,6 +5,32 @@ Page({
    */
   data: {
     openId:'',
+    avatar:''
+  },
+  giveInfo(){
+    let code = '';
+    wx.login({
+      success: (res) => {
+        code = res.code;
+      },
+    });
+    // 获取用户信息
+    wx.getUserProfile({
+      lang: 'zh_CN',
+      desc: '用于完善会员资料',
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          avatar:res.userInfo.avatarUrl
+        })
+      },
+      // 失败回调
+      fail: () => {
+        // 弹出错误
+        //App.showError('已拒绝小程序获取信息');
+        console.log("错了")
+      }
+    });
   },
   formSubmit(e) {
     wx.showToast({
@@ -14,6 +40,7 @@ Page({
       mask: true
     })
     console.log(e)
+    e.detail.value.avatar=this.data.avatar;
 //这里的是云函数
     wx.cloud.callFunction({
       name: "getOpenid"
@@ -24,10 +51,11 @@ Page({
       })
       wx.setStorageSync('openId',this.data.openId )
     })
+
     wx.cloud.callFunction({
       name: "basicInfo",
       data: {
-        info: e.detail.value
+        info: e.detail.value,
       }
     }).then(res => {
       console.log(res)

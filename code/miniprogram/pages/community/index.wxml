@@ -6,36 +6,35 @@
         </navigator>
     </view>
     <view class="center">
-        <view class="team" wx:for="{{teamList}}" wx:for-item="item1">
-            <view class="title">{{item1.nickName}}</view>
-            <view class="tip_content" wx:for="{{item1.tipList}}" wx:for-item="item2">
-                <view class="item_name" key="{{item2.nickName}}">{{item2.nickName}}</view>
+        <view class="tip_content" wx:for="{{teamList}}" wx:for-item="item1">
+            <navigator url="/pages/articles/index?_id={{item1._id}}"  open-type="navigate" >
+                <view class="item_name" key="{{item1.name}}">{{item1.name}}</view>
                 <view class="item_content">
                     <text class="" selectable="ture" space="false" decode="false">
-                        {{item2.content}}
+                        
+                        {{item1.content}}
                     </text>
-                    <image class="image" src="" mode="widthFix" />
+                    <image wx:if="{{item1.image}}" class="image" src="{{item1.image}}" mode="widthFix" />
                 </view>
                 <view class="bottom">
-                    <view class="num">{{item2.readNum}}阅读</view>
-                    <view class="comment">评论{{item2.comment}}</view>
-                    <view class="like">喜欢{{item2.like}}</view>
-                    <view class="time">发帖时间{{item2.time}}</view>
+                    <view class="num">{{item1.read}}阅读</view>
+                    <view class="like">{{item1.like}}喜欢</view>
                 </view>
-            </view>
+                <view class="time">发帖时间  {{item1.time}}</view>
+            </navigator>
         </view>
     </view>
-    <view bindtap="popup" url="/pages/publish/index" class="publish">
+    <view bindtap="popup" class="publish">
         <icon class="iconfont icon-wodechuangzuo"></icon>
         发帖
     </view>
     <page-container show="{{show}}" round="{{true}}" overlay="{{true}}" duration="{{300}}" position='bottom' close-on-slide-down="{{true}}" bindbeforeenter="onBeforeEnter" bindenter="onEnter" bindafterenter="onAfterEnter" bindbeforeleave="onBeforeLeave" bindleave="onLeave" bindafterleave="onAfterLeave" bindclickoverlay="onClickOverlay">
-        <view class="detail-page">
-            <view class="submit" bindtap="exit">发布</view>
+        <form class="detail-page" catchsubmit="formSubmit">
+            <button form-type="submit" class="submit" bindtap="exit">发布</button>
             主题
-            <input class="" value="" type="text" placeholder="输入主题"></input>
+            <input class="" name="name" value="{{message.name}}" type="text" placeholder="输入主题"></input>
             内容
-            <input class="" value="" type="text" placeholder="输入内容"></input>
+            <input class="" name="content" value="{{message.content}}" type="text" placeholder="输入内容"></input>
             <view class="page__bd">
                 <mp-cells>
                     <mp-cell>
@@ -43,6 +42,6 @@
                     </mp-cell>
                 </mp-cells>
             </view>
-        </view>
+        </form>
     </page-container>
 </view>
