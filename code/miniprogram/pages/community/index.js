@@ -100,8 +100,7 @@ Page({
           })
         }
       })
-      wx.setStorageSync("teamList",this.data.teamList);
-    
+      wx.setStorageSync("teamList", this.data.teamList);
     })
   },
   chooseImage: function (e) {
@@ -261,7 +260,32 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let that = this;
+    wx.cloud.callFunction({
+      name: "getCommunityPost"
+    }).then(res => {
+      //console.log(res.result.data);
+      this.setData({
+        teamList: res.result.data
+      })
+      // for (let i in this.teamList.image) {
 
+      // }
+      this.data.teamList.forEach(function (value, index) {
+        //console.log(value)
+        if (value.image) {
+          wx.cloud.downloadFile({
+            fileID: value.image[0]
+          }).then(res => {
+            //console.log(res)
+            that.setData({
+              ['teamList[' + index + '].image']: res.tempFilePath,
+            })
+          })
+        }
+      })
+      wx.setStorageSync("teamList", this.data.teamList);
+    })
   },
 
   /**

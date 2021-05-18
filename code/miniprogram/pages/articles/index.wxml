@@ -1,8 +1,7 @@
 <view class="contain">
     <view class="user">
-        
         <view class="author_name">{{userInfo.nickname}}</view>
-        <image class="author_image" src="{{userInfo.avatar}}" mode="widthFix" />        
+        <image class="author_image" src="{{userInfo.avatar}}" mode="widthFix" />
         <view class="author_major">{{userInfo.major}}</view>
     </view>
     <view class="center">
@@ -13,11 +12,34 @@
             </text>
             <image wx:if="{{articalInfo.image}}" class="image" src="{{articalInfo.image}}" mode="widthFix" />
         </view>
+        <view class="tag">
+            <view class="num">{{articalInfo.read}}阅读</view>
+            <view class="like" catch:tap="collect">
+                <mp-icon  wx:if="{{!likeFlag}}" icon="star" color="red" size="{{22}}"></mp-icon>
+                <mp-icon  wx:else icon="star" color="black" size="{{22}}"></mp-icon>
+                {{articalInfo.like}}喜欢
+            </view>
+            <view class="time">发帖时间  {{articalInfo.time}}</view>
+        </view>
+    </view>
+    <view class="center_discuss">
+        <view class="each" wx:for="{{articalInfo.discuss}}">
+            <view>
+                <image class="avatar" src="{{item.info.avatar}}" mode="widthFix" />
+                <view class="nickname">{{item.info.nickname}}</view>
+            </view>
+            <view class="discuss">{{item.discuss}}</view>
+        </view>
     </view>
     <view class="bottom">
-        <view class="num">{{articalInfo.read}}阅读</view>
-        <view class="like">{{articalInfo.like}}喜欢</view>
-        <view class="time">发帖时间  {{articalInfo.time}}</view>
+        <view class="bottom_image">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <form catchsubmit="formSubmit">
+            <view class="form">
+                <input class="input_contain" name="input" value="{{discuss}}" type="text" placeholder="输入" placeholder-class="input-placeholder"></input>
+                <button class="input_submit" form-type="submit">提交</button>
+            </view>
+        </form>
     </view>
-    <open-data class="" type="userAvatarUrl" ></open-data>
 </view>

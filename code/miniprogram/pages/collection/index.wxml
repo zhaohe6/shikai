@@ -1,15 +1,13 @@
 <view class="all">
-    <navigator url="/pages/articles/index" class="contain" wx:for="{{articalList}}" wx:for-item="artical" wx:key="{{index}}">
-        <view class="title">{{artical.title}}</view>
+    <navigator url="/pages/articles/index?_id={{artical._id}}" class="contain" wx:for="{{articalList}}" wx:for-item="artical" wx:key="{{index}}">
+        <view class="title">{{artical.name}}</view>
         <view class="middle">
-            <view class="words">{{artical.words}}</view>
-            <image mode="widthFix" src="{{artical.image}}" />
+            <view class="words">{{artical.content}}</view>
+            <image wx:if="{{artical.image}}" mode="widthFix" src="{{artical.image}}" />
         </view>
         <view class="bottom">
-            <view class="num">{{artical.readNum}}阅读</view>
-            <view class="comment">评论{{artical.comment}}</view>
+            <view class="num">{{artical.read}}阅读</view>
             <view class="like">喜欢{{artical.like}}</view>
-            <view class="time">发帖时间{{artical.time}}</view>
         </view>
     </navigator>
 </view>

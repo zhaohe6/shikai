@@ -34,7 +34,19 @@ Page({
       },
     ]
   },
-
+  async getMyCreation(event) {
+    const res = await wx.cloud.callFunction({
+      name: "getMyCreation",
+      data: {
+        openId: wx.getStorageSync("openId")
+      }
+    })
+    console.log(res);
+    this.setData({
+      articalList:res.result.resArr.data
+    })
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -53,7 +65,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getMyCreation();
   },
 
   /**
@@ -67,7 +79,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    this.getMyCreation();
   },
 
   /**

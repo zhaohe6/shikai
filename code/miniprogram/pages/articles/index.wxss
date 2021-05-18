@@ -1,21 +1,106 @@
+page {
+  background-color: #cdf3ff;
+  margin-bottom: 80rpx;
+}
 .contain {
   padding: 20rpx;
-  background-color: #cdf3ff;
 }
 .contain .user {
-  background-color: #0093c4;
+  background-color: #5ea8fc;
   border-radius: 30rpx;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+  font-size: 40rpx;
 }
 .contain .user view {
   color: ghostwhite;
   font-weight: bolder;
+  width: 150rpx;
+  height: 70rpx;
+  overflow: hidden;
 }
 .contain .user image {
   margin: 0rpx 20rpx;
   width: 30%;
   border-radius: 50%;
+}
+.contain .center {
+  position: relative;
+  color: #616161;
+  background-color: white;
+  min-height: 900rpx;
+  margin-top: 30rpx;
+  border-radius: 30rpx;
+  padding: 20rpx;
+}
+.contain .center .item_name {
+  font-size: 40rpx;
+}
+.contain .center .tag {
+  position: absolute;
+  display: flex;
+  height: 2rem;
+  bottom: 0;
+  left: 0;
+  justify-content: space-around;
+  width: 100%;
+}
+.contain .center_discuss {
+  display: flex;
+  flex-direction: column;
+}
+.contain .center_discuss .each {
+  display: flex;
+  background-color: white;
+  margin: 10rpx auto;
+  width: 90%;
+  padding: 20rpx;
+  text-align: center;
+  align-items: center;
+  border-radius: 30rpx;
+}
+.contain .center_discuss .each view image {
+  border-radius: 50%;
+  width: 90rpx;
+}
+.contain .bottom {
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  background-color: #caddf5;
+  width: 90vw;
+  border-radius: 30rpx;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.contain .bottom .bottom_image {
+  border-radius: 50rpx;
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  margin-left: 30rpx;
+}
+.contain .bottom .form {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+}
+.contain .bottom .form .input_submit {
+  background-color: #0e74e9;
+  width: 80rpx;
+  color: white;
+  padding: 0;
+  font-size: 25rpx;
+  padding-top: 15rpx ;
+}
+.contain .bottom .form .input_contain {
+  height: 2rem;
+  width: 60vw;
+  color: #747774;
 }

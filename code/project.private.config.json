@@ -57,7 +57,13 @@
         {
           "name": "pages/articles/index",
           "pathName": "pages/articles/index",
-          "query": "_id=b00064a7609002ab1414c0ed3edaa96e",
+          "query": "_id=28ee4e3e608d3f35145447193ead9bf1",
+          "scene": null
+        },
+        {
+          "name": "pages/collection/index",
+          "pathName": "pages/collection/index",
+          "query": "openId=oWmCf5WyMmyvfM-4sE6YZlo3kQW4",
           "scene": null
         }
       ]

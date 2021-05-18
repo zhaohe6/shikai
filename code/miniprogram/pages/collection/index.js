@@ -6,7 +6,7 @@ Page({
    */
   data: {
     articalList: [{
-        title:"你好我是标题你好我是标题你好我是标题你好我是标题",
+        title: "你好我是标题你好我是标题你好我是标题你好我是标题",
         words: "跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试",
         image: "https://pic.rmb.bdstatic.com/db1348e415994c2184f3f343aad5532e.jpeg",
         readNum: "120",
@@ -15,7 +15,7 @@ Page({
         time: "2021-4-16"
       },
       {
-        title:"你好我是标题",
+        title: "你好我是标题",
         words: "跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试",
         image: "https://pic.rmb.bdstatic.com/db1348e415994c2184f3f343aad5532e.jpeg",
         readNum: "120",
@@ -24,7 +24,7 @@ Page({
         time: "2021-4-16"
       },
       {
-        title:"你好我是标题",
+        title: "你好我是标题",
         words: "跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试跨专业考试",
         image: "https://pic.rmb.bdstatic.com/db1348e415994c2184f3f343aad5532e.jpeg",
         readNum: "120",
@@ -34,12 +34,24 @@ Page({
       },
     ]
   },
-
+  async getMyCollection(event) {
+    const res = await wx.cloud.callFunction({
+      name: "getMyCollection",
+      data: {
+        openId: wx.getStorageSync("openId")
+      }
+    })
+    console.log(res);
+    this.setData({
+      articalList:res.result.resArr
+    })
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getMyCollection();
   },
 
   /**
@@ -53,6 +65,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
 
   },
 
